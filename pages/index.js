@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import TodoList from "../components/ToDoList";
 import Navbar from "../components/Navbar";
 import { getAvailableTasks } from "../services/taskService";
-import styled from "styled-components";
 import HeadAndGlobalStyles from "../components/HeadAndGlobalStyles";
 import Layout from "../components/Layout";
 
@@ -25,7 +24,7 @@ const MyTodoList = (props) => {
   );
 }
 
-export const getServerSideProps = async (query, res, req) => {
+export const getServerSideProps = async () => {
   return {
     props: {
       tasks: getAvailableTasks(),
